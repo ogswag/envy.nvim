@@ -22,7 +22,7 @@ function M.get(c, opts)
 		Cursor = { reverse = true },
 		lCursor = { reverse = true },
 		CursorIM = { reverse = true },
-		CursorLine = { bg = c.lgrey1 },
+		CursorLine = { bg = c.lgrey2 },
 		CursorColumn = { bg = c.lgrey1 },
 		LineNr = { fg = c.grey, bg = transparent and "NONE" or c.lgrey1 },
 		CursorLineNr = { fg = c.grey, bg = transparent and "NONE" or c.lgrey1, bold = true },
