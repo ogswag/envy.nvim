@@ -1,14 +1,18 @@
 # envy.nvim
 
-A light Neovim colorscheme with comfortable contrast — a modern Lua rewrite of
+| envy                 | envy-colorful                          |
+| -------------------- | -------------------------------------- |
+| ![envy](pic/envy.png) | ![envy-colorful](pic/envy-colorful.png) |
+
+A light Neovim colorscheme with comfortable contrast --- a modern Lua rewrite of
 [Envy](https://github.com/kkga/vim-envy) by Gadzhi Kharkharov.
 
-Ships **two variants**:
+Ships two variants:
 
 | Variant         | Feel                                                                                                                                                          |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `envy`          | Minimal / near-monochrome — black foreground, **bold** keywords, grey comments, green strings, blue numbers. The original look.                               |
-| `envy-colorful` | Moderate extra syntax color — keywords (purple), functions (blue), types (cyan), constants (red), muted properties/parameters. Still calm and light-friendly. |
+| `envy`          | Minimal / near-monochrome --- black foreground, **bold** keywords, grey comments, green strings, blue numbers. The original look.                               |
+| `envy-colorful` | Moderate extra syntax color --- keywords (purple), functions (blue), types (cyan), constants (red), muted properties/parameters. Still calm and light-friendly. |
 
 Both share an identical UI and the same palette; only the syntax tokens differ.
 
@@ -16,19 +20,22 @@ Both share an identical UI and the same palette; only the syntax tokens differ.
 
 - [Requirements](#requirements)
 - [Install](#install)
+    - [Requirements](#requirements)
+    - [lazy.nvim](#lazynvim)
+    - [packer.nvim](#packernvim)
 - [Configuration](#configuration)
   - [Per-variant transparency](#per-variant-transparency)
 - [Plugin support](#plugin-support)
   - [lualine](#lualine)
 - [Credits](#credits)
 
-## Requirements
 
-- Neovim ≥ 0.8 with `termguicolors` (a true-color terminal or GUI).
 
 ## Install
+### Requirements
+- Neovim ≥ 0.8 with `termguicolors` (a true-color terminal or GUI).
 
-**lazy.nvim**
+### lazy.nvim
 
 ```lua
 {
@@ -43,7 +50,7 @@ Both share an identical UI and the same palette; only the syntax tokens differ.
 }
 ```
 
-**packer.nvim**
+### packer.nvim
 
 ```lua
 use({
@@ -53,14 +60,6 @@ use({
     vim.cmd.colorscheme("envy")
   end,
 })
-```
-
-Or simply, after the plugin is on the runtimepath:
-
-```vim
-colorscheme envy
-" or
-colorscheme envy-colorful
 ```
 
 ## Configuration
@@ -146,9 +145,8 @@ require("lualine").setup({ options = { theme = "envy" } })
 
 ## Credits
 
-- Original Envy colorscheme: **Gadzhi Kharkharov** ([kkga/vim-envy](https://github.com/kkga/vim-envy))
-- NeoVim maintenance: **Alexander Zakharov**
+- Original vim-envy colorscheme: Gadzhi Kharkharov ([kkga/vim-envy](https://github.com/kkga/vim-envy))
+- NeoVim maintenance: Alexander Zakharov
 - License: MPL 2.0
 
-The original `envy.vim` and `envy.colortemplate` are kept in this repo as the
-color-of-record reference.
+The original `envy.colortemplate` is kept in this repo as a reference.

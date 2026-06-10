@@ -1,0 +1,343 @@
+Full name:   Envy
+Short name:  envy
+Author:      Gadzhi Kharkharov <me@kkga.me>
+Website:     https://github.com/kkga/vim-envy
+Description: A light color scheme with comfortable contrast.
+License:     MPL 2.0
+Neovim:      yes
+Variant:     gui 256
+Background:  light
+
+; Colors
+Color: background #eeeeee ~
+Color: black      #000000 ~
+Color: brblack    #585858 ~
+Color: blue       #005fd7 ~
+Color: lblue      #afd7ff ~
+Color: green      #005f00 ~
+Color: red        #d70000 ~
+Color: lred       #ffafaf ~
+Color: yellow     #d75f00 ~
+Color: lyellow    #ffd787 ~
+Color: purple     #5f00d7 ~
+Color: pink       #ffafff ~
+Color: cyan       #0087af ~
+Color: lcyan      #afd7af ~
+Color: white      #ffffff ~
+Color: grey       #6c6c6c ~
+Color: lgrey1     #e4e4e4 ~
+Color: lgrey2     #c6c6c6 ~
+Color: lgrey3     #b2b2b2 ~
+
+; Terminal colors
+Term Colors: black red green yellow blue purple cyan lgrey3
+Term Colors: brblack red green yellow blue purple cyan lgrey3
+
+; Generic highlight groups
+ColorColumn none lgrey1
+Comment grey none
+Conceal none none
+Constant black none
+Cursor none none reverse
+CursorLine none lgrey1
+LineNr grey lgrey1
+CursorLineNR grey lgrey1 bold
+Directory blue none bold
+FoldColumn grey lgrey1
+Identifier black none
+Include black none bold
+Keyword black none bold
+Macro purple none
+MatchParen none lblue bold
+MoreMsg black none
+NonText lgrey2 none
+Normal black background
+Number blue none
+Operator black none
+Pmenu black white
+PmenuSel black lgrey2 bold
+PreProc black none
+Question black none
+Regexp yellow none
+Search none lblue
+Special black none
+SpellBad red none undercurl
+SpellCap purple none undercurl
+SpellLocal green none undercurl
+SpellRare purple none undercurl
+StatusLine black lgrey3 bold
+StatusLineNC black lgrey2
+String green none
+TabLine black lgrey2
+TabLineFill black lgrey2
+TabLineSel black background bold
+Title black none bold
+Todo cyan none bold
+VertSplit lgrey2 lgrey2
+Folded none lgrey1
+Visual none lblue
+
+FloatWindow black white
+ErrorFloatWindow red white 
+WarningFloatWindow yellow white
+HintFloatWindow cyan white
+
+ErrorSign   black lred bold
+WarningSign black lyellow bold
+HintSign    black lcyan bold
+
+ErrorHighlight none lred
+WarningHighlight none lyellow
+HintHighlight none lcyan
+
+ErrorUnderline red none undercurl bold
+WarningUnderline yellow none undercurl bold
+HintUnderline cyan none undercurl bold
+
+ErrorMsg white red
+WarningMsg white yellow
+HintMsg white cyan
+
+DiffAdd green lgrey1
+DiffChange yellow lgrey1
+DiffDelete red lgrey1
+DiffText -> Number
+
+lCursor -> Cursor
+Boolean -> Keyword
+Character -> String
+Error -> ErrorMsg
+Label -> Special
+PmenuThumb -> PmenuSel
+PreCondit -> Macro
+SignColumn -> FoldColumn
+SpecialKey -> Number
+Statement -> Keyword
+StorageClass -> Keyword
+Type -> Keyword
+WildMenu -> PmenuSel
+
+
+; These highlight groups can be used for statuslines, for example when
+; displaying ALE warnings and errors.
+WhiteOnYellow white yellow
+WhiteOnRed white red
+WhiteOnPurple white purple
+
+; Clever-F/Sneak/Hop
+CleverFDefaultLabel -> WhiteOnRed
+Sneak -> WhiteOnRed
+HopNextKey -> WhiteOnRed
+HopNextKey1 -> WhiteOnRed
+HopNextKey2 -> WhiteOnYellow
+
+; Telescope
+TelescopeBorder -> Comment
+TelescopePromptBorder -> Comment
+TelescopeResultsBorder -> Comment
+TelescopePreviewBorder -> Comment
+
+; ALE
+ALEErrorSign -> ErrorSign
+ALEError -> ErrorHighlight
+ALEWarningSign -> WarningSign
+ALEWarning -> WarningHighlight
+ALEVirtualTextError -> ALEError
+ALEVirtualTextWarning -> ALEWarning
+; ALEVirtualTextStyleError xxx links to ALEVirtualTextError
+; ALEVirtualTextStyleWarning xxx links to ALEVirtualTextWarning
+; ALEVirtualTextInfo xxx links to ALEVirtualTextWarning
+
+; COC
+CocFloating -> FloatWindow
+CocErrorSign -> ErrorSign
+CocErrorHighlight -> ErrorHighlight
+CocErrorFloat -> ErrorFloatWindow
+CocWarningSign -> WarningSign
+CocWarningHighlight -> WarningHighlight
+CocWarningFloat -> WarningFloatWindow
+CocHintSign -> HintSign
+CocHintHighlight -> HintHighlight
+CocHintFloat -> HintFloatWindow
+CocInfoSign -> CocHintSign
+CocInfoHighlight -> CocHintHighlight
+CocInfoFloat -> CocHintFloat
+
+CocListMode -> StatusLine
+CocListPath -> StatusLine
+
+; vim-lsp
+lspReference -> Search
+
+; nvim-lsp
+LspDiagnosticsVirtualTextError -> ErrorHighlight
+LspDiagnosticsVirtualTextWarning -> WarningHighlight
+LspDiagnosticsVirtualTextInformation -> HintHighlight
+LspDiagnosticsVirtualTextHint -> HintHighlight
+LspDiagnosticsSignError -> ErrorSign
+LspDiagnosticsSignWarning -> WarningSign
+LspDiagnosticsSignInformation -> HintSign
+LspDiagnosticsSignHint -> HintSign
+LspDiagnosticsUnderlineError -> ErrorUnderline
+LspDiagnosticsUnderlineWarning -> WarningUnderline
+LspDiagnosticsUnderlineInformation -> HintUnderline
+LspDiagnosticsUnderlineHint -> HintUnderline
+
+; CSS
+cssClassName -> Keyword
+cssColor -> Number
+cssIdentifier -> Keyword
+cssImportant -> Keyword
+cssProp -> Identifier
+cssTagName -> Keyword
+
+; gitsigns
+GitSignsAdd -> DiffAdd
+GitSignsChange -> DiffChange
+GitSignsDelete -> DiffDelete
+GitSignsChangeDelete -> DiffDelete
+
+; Neogit
+NeogitDiffAdd green none
+NeogitDiffDelete red none
+NeogitDiffAddHighlight -> DiffAdd
+NeogitDiffDeleteHighlight -> DiffDelete
+NeogitDiffContextHighlight none lgrey1
+NeogitHunkHeader grey lgrey1 bold
+NeogitHunkHeaderHighlight none lgrey2 bold
+
+; Dot
+dotKeyChar -> Operator
+
+; Fugitive
+FugitiveblameTime blue none
+FugitiveblameHash purple none
+
+; Git commit messages
+gitCommitOverflow -> ErrorMsg
+gitCommitSummary -> String
+
+; HAML
+hamlClass black none
+hamlId black none
+hamlTag black none bold
+hamlDocType -> Comment
+htmlArg -> Identifier
+
+; HTML
+htmlTag black none bold
+htmlLink -> String
+htmlScriptTag -> htmlTag
+htmlSpecialTagName -> htmlTag
+htmlTagName -> htmlTag
+
+; Inko
+inkoCommentBold grey none bold
+inkoCommentInlineUrl -> Number
+inkoCommentItalic grey none italic
+inkoCommentTitle grey none bold
+inkoInstanceVariable -> Directory
+inkoKeywordArgument -> Regexp
+
+; Java
+javaAnnotation -> Directory
+javaCommentTitle -> javaComment
+javaDocParam -> Todo
+javaDocTags -> Todo
+javaExternal -> Keyword
+javaStorageClass -> Keyword
+
+; Javascript
+JavaScriptNumber -> Number
+javaScriptBraces -> Operator
+javaScriptFunction -> Keyword
+javaScriptIdentifier -> Keyword
+javaScriptMember -> Identifier
+
+; JSON
+jsonKeyword -> String
+
+; Make
+makeTarget -> Function
+
+; Markdown
+markdownCode -> markdownCodeBlock
+markdownCodeBlock -> Comment
+markdownListMarker -> Keyword
+markdownOrderedListMarker -> Keyword
+
+; netrw
+netrwClassify -> Identifier
+
+; Perl
+perlPackageDecl -> Identifier
+perlStatementInclude -> Statement
+perlStatementPackage -> Statement
+podCmdText -> Todo
+podCommand -> Comment
+podVerbatimLine -> Todo
+
+; Ruby
+rubyAttribute -> Identifier
+rubyClass -> Keyword
+rubyClassVariable -> rubyInstancevariable
+rubyConstant -> Constant
+rubyDefine -> Keyword
+rubyFunction -> Function
+rubyInstanceVariable -> Directory
+rubyMacro -> Identifier
+rubyModule -> rubyClass
+rubyRegexp -> Regexp
+rubyRegexpCharClass -> Regexp
+rubyRegexpDelimiter -> Regexp
+rubyRegexpQuantifier -> Regexp
+rubyRegexpSpecial -> Regexp
+rubyStringDelimiter -> String
+rubySymbol -> Regexp
+
+; Rust
+rustCommentBlockDoc -> Comment
+rustCommentLineDoc -> Comment
+rustFuncCall -> Identifier
+rustModPath -> Identifier
+
+; Python
+pythonOperator -> Keyword
+
+; SASS
+sassClass -> cssClassName
+sassId -> cssIdentifier
+
+; Shell
+shFunctionKey -> Keyword
+
+; SQL
+sqlKeyword -> Keyword
+
+; TypeScript
+typescriptBraces -> Operator
+typescriptEndColons -> Operator
+typescriptExceptions -> Keyword
+typescriptFuncKeyword -> Keyword
+typescriptFunction -> Function
+typescriptIdentifier -> Identifier
+typescriptLogicSymbols -> Operator
+
+; Vimscript
+VimCommentTitle -> Todo
+VimIsCommand -> Constant
+vimGroup -> Constant
+vimHiGroup -> Constant
+
+; XML
+xmlAttrib -> Identifier
+xmlTag -> Identifier
+xmlTagName -> Identifier
+
+; YAML
+yamlPlainScalar -> String
+
+; YARD
+yardComment -> Comment
+yardType -> Todo
+yardTypeList -> Todo
