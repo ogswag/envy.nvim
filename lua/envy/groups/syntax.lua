@@ -10,7 +10,8 @@ local M = {}
 function M.tokens(c, opts, variant)
 	local colorful = variant == "colorful"
 	return {
-		keyword = colorful and { fg = c.purple } or { fg = c.fg, bold = opts.bold_keywords },
+		keyword = colorful and { fg = c.purple, bold = opts.bold_keywords }
+			or { fg = c.fg, bold = opts.bold_keywords },
 		func = colorful and { fg = c.blue } or { fg = c.fg },
 		type = colorful and { fg = c.cyan } or { fg = c.fg },
 		constant = colorful and { fg = c.red } or { fg = c.fg },
